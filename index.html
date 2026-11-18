@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse every country in the world, search by name, filter by region and explore details like population, languages and neighbouring countries." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/rest-countries-api-with-color-theme-switcher/assets/favicon-32x32-DQjEQYWa.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.restcountries.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap" rel="stylesheet" />
+    <title>Where in the world? | REST Countries</title>
+    <script>
+      // Apply the saved (or OS-preferred) theme before first paint to avoid a light/dark flash.
+      (function () {
+        var theme;
+        try { theme = localStorage.getItem('theme'); } catch (e) {}
+        if (theme !== 'dark' && theme !== 'light') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+    <script type="module" crossorigin src="/rest-countries-api-with-color-theme-switcher/assets/index-DEH_Om1y.js"></script>
+    <link rel="stylesheet" crossorigin href="/rest-countries-api-with-color-theme-switcher/assets/index-DG6Lkba8.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

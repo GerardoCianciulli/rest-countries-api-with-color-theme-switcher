@@ -1,0 +1,24 @@
+# Dependencies & build output
+node_modules
+dist
+*.tsbuildinfo
+
+# Local env (holds the REST Countries API key)
+.env.local
+.env.*.local
+
+# Design source files must not be shared (see design/README.md)
+*.fig
+*.zip
+
+# Old vanilla-JS clone kept locally for reference
+/rest-countries-api-with-color-theme-switcher/
+
+# OS / editor
+.DS_Store
+.vscode
+.idea
+*.log
+
+# Local Claude Code tooling
+.claude/
